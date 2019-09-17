@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rokkitt', serif;
+}
+
+/*  main header */
+
+#logo{
+    width: 50%;
+    height:auto;
+}
+
+#input-search{
+    float: right;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+}
+
+#button-search{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding: 0;
+    background: #88c8bc;
+    border-radius: 20px;
+    border: none;
+}
+
+#button-search i{
+    color:#fff;
+}
+
+/* main-navbar */
+
+#toggle {
+    visibility: hidden;
+    background-color: white;
+}
+
+#main-navbar>ul>li>a.nav-link{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+
+#main-navbar>ul>li:last-of-type{
+    position: absolute;
+    right: 100px;
+}
+
+#main-navbar>ul>li a:hover{
+    background-color: #818181;
+    color: #f1f1f1;
+}
+
+#side-navbar {
+    position: fixed;
+    height: 100%;
+    width: 0;
+    padding-top: 60px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    opacity: 0.9;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+/* side-navbar */
+
+#side-navbar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+
+#side-navbar a:hover {
+    color: #f1f1f1;
+}
+
+#btn-close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    font-weight: bold;
+    margin-left: 50px;
+    color: #818181;
+}
+
+/*  banner */
+
+#banner{
+    background-color: #88c8bc;
+    text-transform: uppercase;
+    text-align: center;
+    color: #f1f1f1;
+    height: auto;
+}
+
+#banner p{
+    padding: 20px 10px;
+}
+
+/*  jumbotron */
+
+#jumbotron{
+    background-image: url(showcase.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+    border-radius: 0;
+    margin-top: -20px;
+    text-align: center;
+    color: #f1f1f1;
+}
+
+#btn-jumbotron{
+    border-radius: 20px;
+    border: none;
+}
+
+#btn-jumbotron:hover{
+    border:2px solid #88c8bc;
+    color: #88c8bc;
+}
+
+hr.my-4{
+    background-color:  #f1f1f1;
+}
+
+/* Sortiment */
+
+#section img{
+    width: 100%;
+    height: 30vh;
+    margin-left: 10px;
+}
+
+#section>.card-deck>.card a{
+    background-color: #88c8bc;
+    color: #f1f1f1;
+    border-radius: 20px;
+    height: 50px;
+    font-size: 24px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+#section>.card-deck>.card a:hover{
+    background-color: #818181;
+}
+
+/* Kontakt */
+
+#article{
+    margin-bottom: 40px;
+}
+
+.card-text{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Footer */
+
+#footer{
+    border-top: 2px solid #88c8bc;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#footer i{
+    display: inline;
+}
+
+/* Responsive  */
+
+@media screen and (min-width: 1200px){
+    #jumbotron {
+        height: 65vh;
+    }
+    #article {
+        height: 60vh;
+        border-bottom: 2px solid #88c8bc;
+    }
+    #section {
+        height: 80vh;
+    }
+   
+}
+
+@media screen and (max-width: 1400px){
+    #section>.card-deck img{
+        width: 90%;
+    }
+    #section>.card-deck p{
+        font-size: 70%
+    }
+    #main-navbar>ul>li:last-of-type{
+        position: absolute;
+        right: 50px;
+    }
+    #section img{
+        height: 20vh;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    #section img{
+        height: 10vh;
+    }
+}
+
+@media screen and (max-width: 575px){     /*  Varför fungerar inte på exakt 575px bredd? */
+    #section>.card-deck img{
+        width: 80%;
+    }
+    #button-search {
+        top: -8px;
+    }
+    #toggle {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        visibility: visible;
+    }
+    #main-navbar {
+        visibility: hidden;
+    }
+    #main-container{
+        margin-bottom: -40px;
+    }
+    #section img{
+        height: 40vh;
+    }
+    #footer{
+        font-size: 80%;
+    }
+  }
